@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script src="javascript.js"></script>
+</head>
+<body>
+<!--JS coes here!-->
+
+<h1>JS Example page</h1>
+<script>
+    console.log("Hello, World!")
+
+    console.log(23 + 97)
+    
+    console.log(3 + 6 + 9 + 3 + 6 + 9)
+
+    console.log((4 + 6 + 9) / 77)
+
+
+    let a = 10;
+    let b = 7* a;
+
+    const max = 57;
+    let actual = max -13;
+    let percentage = actual / max; 
+
+function multiply(x,y) {
+    return x*y;
+}
+let result = multiply(x,y);
+console.log(result);
+
+
+</script>
+
+<h2>Knowledge Check part 1 of JS</h2>
+<p>
+<h3><br>Name the three ways to declare a variable</br></h3>
+<br>Variables hold information, they are  named storage for data.<br> 
+1- const- unchanging variables, use const instead of let. 
+<br>2- var-
+<br>3- let- example let message;
+message = "hello world!" 
+<h4>Which of the three variable declarations should you avoid and why?</h4>
+Var becasue it is outdated and no longer used.
+
+<h4>What rules should you follow when naming variables?</h4>
+Variables should have a clear and obvious meaning, describing the data that it stores. most important and complex skills in programming. 
+The name must contain only letters, digits, or the symbols $ and _.
+The first character must not be a digit.
+
+
+<h4>What happens when you add numbers and strings together?</h4>
+Usually, the plus operator + sums numbers.
+But, if the binary + is applied to strings, it merges <b>concatenates</b> them:
+
+let s = "my" + "string";
+alert(s); // mystring
+
+Note that if any of the operands is a string, then the other one is converted to a string too.
+
+For example:<br>
+
+<br>alert( '1' + 2 ); // "12"<br>
+<br>alert( 2 + '1' ); // "21"<br>
+
+
+See, it doesn’t matter whether the first operand is a string or the second one.
+
+<br>Here’s a more complex example:<br>
+
+alert(2 + 2 + '1' ); // "41" and not "221"
+
+
+<h4>How does the Modulo (%), or Remainder, operator work?</h4>
+
+The remainder operator %, despite its appearance, is not related to percents.
+
+The result of a % b is the remainder of the integer division of a by b.
+
+<br>For instance:</br>
+
+<br>alert( 5 % 2 ); // 1, the remainder of 5 divided by 2
+alert( 8 % 3 ); // 2, the remainder of 8 divided by 3
+alert( 8 % 4 ); // 0, the remainder of 8 divided by 4</br>
+
+<h4>Explain the difference between == and ===.</h4>
+<br> '==' <b>Equatily operator</b>, it compares the vaules for equatily after <b>type coercion</b> is performed. which means the operand are converted to the same typer before comparison is made.<br>
+<b>Example:</b> compare a string and a number using '==' JS will attempt to convert the string to a number or vs. the compare vaules.<br>
+'5'=='5' will return 'True'<br>
+<br>'==='<b>Strict equality</b> operator, compares the vaules as well as data types of the operands without performing <b>type coercion.</b>
+<br> If data types are different the '===' operator will return 'false' without trying to convert the operands to the same data type.<br>
+<b>Example:</b> '5'==='5' would return 'false' because data types are different (number & string).
+
+<h4>When would you receive a NaN result?</h4>
+
+When the result is not a number(NaN).<br>
+
+when an expression results in a number that is undefined or can't be represented. 
+
+
+<h4>How do you increment and decrement a number?</h4>
+
+Increment / Decrement <br>
+Increaseing or decreasing a number by one is among the most common numerical operations. 
+<br>Increment ++ increases variable by 1</br>
+let counter = 2;
+<br>counter++;// same as counter= counter+1
+<br> 
+Decrement -- decreases a variable by 1;</br>
+let counter = 2;<br>
+counter --;//same as counter=counter-1
+
+
+<h4>Explain the difference between prefixing and postfixing increment/decrement operators.</h4>
+Postfix form => Counter++ returns to old vaule<br>
+let counter=1;<br>
+let a = counter++;//<br>
+alert(a);//1<br>
+<br>Prefix form<br>
+let counter=1;<br>
+let a= ++counter;//(*)<br>
+alert(a);//2
+<br>
+<h4>What is operator precedence and how is it handled in JS?</h4>
+P()<br>
+E<br>
+M*<br>
+D/<br>
+A+<br>
+S-
+<h4>How do you access developer tools and the console?</h4>
+Go to the web page, right click and select inspect, then at the top of the screen click console.<br>
+console.log() is the command to print something to the developer console in your browser.
+
+<h4>How do you log information to the console?</h4>
+
+<h4>What does unary plus operator do to string representations of integers? eg. +”10”</h4>
+<b>Unary operator</b> unary plus operator (+) can be used to convert a string representation of an integer into an actual numeric value.<br>
+When you apply the unary plus operator to a string, JavaScript attempts to convert the string to a number.<br>
+<b>Example</b> <br>
+let stringNumber = "42";<br>
+let numericValue = +stringNumber;<br>
+console.log(numericValue); // Output: 42 (a number)<br>
+In this case, the unary plus operator converts the string "42" into the numeric value 42.<br>
+<br>
+When used with a non-numeric string:<br>
+let nonNumericString = "hello";<br>
+let numericValue = +nonNumericString;<br>
+console.log(numericValue); // Output: NaN (Not a Number)
+<br>
+If the string cannot be converted to a valid number, JavaScript returns NaN.<br>
+It's important to note that the unary plus operator only works with strings that represent valid numeric values. <br>
+If the string contains non-numeric characters (except for whitespace characters around the number), the result will be NaN.<br>
+<br>let invalidString = "42px";<br>
+let numericValue = +invalidString;<br>
+console.log(numericValue); // Output: NaN<br>
+In summary, the unary plus operator in JavaScript is useful for converting string 
+representations of integers into actual numeric values, but it's crucial to ensure that the string contains
+ a valid numeric representation to avoid unexpected results like NaN.
+
+
+</p>
+</body>
+</html>
